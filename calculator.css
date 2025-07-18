@@ -60,6 +60,35 @@ button:active{
     background-color: hsl(35, 100%, 65%);
 }
 
+
+
+/* 1. Responsive viewport & font scaling */
+html {
+  font-size: 16px;               /* keep rem predictable */
+}
+@media (max-width: 480px) {
+  html { font-size: 14px; }      /* slightly smaller rem on phones */
+}
+
+/* 2. Make the calculator full-width on phones */
+#calc {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* 3. Flexible keys & readable buttons */
+#keys {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;                  /* proportional gap */
+  padding: 1rem;
+}
+button {
+  width: 100%;                   /* fill the grid cell */
+  aspect-ratio: 1 / 1;           /* keeps perfect circles */
+  font-size: 2rem;               /* shrinks with rem above */
+}
+
 .operator-btn:active{
     background-color: hsl(35, 100%, 75%);
 }
