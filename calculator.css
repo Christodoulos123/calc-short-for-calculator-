@@ -60,35 +60,3 @@ button:active{
     background-color: hsl(35, 100%, 65%);
 }
 
-
-
-/* ---- Mobile-only overrides (< 500 px wide) ---- */
-@media (max-width: 500px) {
-  html { font-size: 13px; }          /* shrink rem */
-
-  #calc {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;               /* remove corner radius for edge-to-edge look */
-  }
-
-  #display {
-    font-size: 3rem;                /* smaller screen = smaller digits */
-    padding: 15px;
-  }
-
-  #keys {
-    gap: 6px;                       /* tighter grid */
-    padding: 12px;
-  }
-
-  button {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    font-size: 1.7rem;              /* readable but compact */
-    border-radius: 50%;             /* still circular */
-  }
-}
-.operator-btn:active{
-    background-color: hsl(35, 100%, 75%);
-}
