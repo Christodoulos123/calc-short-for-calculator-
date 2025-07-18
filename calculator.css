@@ -62,33 +62,33 @@ button:active{
 
 
 
-/* 1. Responsive viewport & font scaling */
-html {
-  font-size: 16px;               /* keep rem predictable */
-}
-@media (max-width: 480px) {
-  html { font-size: 14px; }      /* slightly smaller rem on phones */
-}
+/* ---- Mobile-only overrides (< 500 px wide) ---- */
+@media (max-width: 500px) {
+  html { font-size: 13px; }          /* shrink rem */
 
-/* 2. Make the calculator full-width on phones */
-#calc {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
+  #calc {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;               /* remove corner radius for edge-to-edge look */
+  }
 
-/* 3. Flexible keys & readable buttons */
-#keys {
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;                  /* proportional gap */
-  padding: 1rem;
-}
-button {
-  width: 100%;                   /* fill the grid cell */
-  aspect-ratio: 1 / 1;           /* keeps perfect circles */
-  font-size: 2rem;               /* shrinks with rem above */
-}
+  #display {
+    font-size: 3rem;                /* smaller screen = smaller digits */
+    padding: 15px;
+  }
 
+  #keys {
+    gap: 6px;                       /* tighter grid */
+    padding: 12px;
+  }
+
+  button {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    font-size: 1.7rem;              /* readable but compact */
+    border-radius: 50%;             /* still circular */
+  }
+}
 .operator-btn:active{
     background-color: hsl(35, 100%, 75%);
 }
